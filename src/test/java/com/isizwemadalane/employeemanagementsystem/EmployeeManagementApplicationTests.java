@@ -1,10 +1,10 @@
-package com.isizwemadalane.springbootreactjs;
+package com.isizwemadalane.employeemanagementsystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootReactjsApplicationTests {
+class EmployeeManagementApplicationTests {
 
 	@Test
 	void contextLoads() {

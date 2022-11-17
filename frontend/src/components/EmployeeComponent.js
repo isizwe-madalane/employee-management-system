@@ -1,25 +1,25 @@
 import React from "react";
-import UserService from "../services/UserService";
+import EmployeeService from "../services/EmployeeService";
 
-class UserComponent extends React.Component {
+class EmployeeComponent extends React.Component {
 
     constructor(props) {
         super(props) 
         this.state = {
-            users:[]
+            employees:[]
         }
     }
 
     componentDidMount() {
-        UserService.getUsers().then((response) => {
-            this.setState({ users: response.data })
+        EmployeeService.getEmployees().then((response) => {
+            this.setState({ employees: response.data })
         });
     }
 
     render() {
         return(
             <div>
-                <h1 className="text-center">Users List</h1>
+                <h1 className="text-center">Employees List</h1>
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -31,13 +31,13 @@ class UserComponent extends React.Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.users.map(
-                                user =>
-                                <tr key={user.id}>
-                                    <td>{user.id}</td>
-                                    <td>{user.firstName}</td>
-                                    <td>{user.lastName}</td>
-                                    <td>{user.email}</td>
+                            this.state.employees.map(
+                                employee =>
+                                <tr key={employee.id}>
+                                    <td>{employee.id}</td>
+                                    <td>{employee.firstName}</td>
+                                    <td>{employee.lastName}</td>
+                                    <td>{employee.email}</td>
                                 </tr>
                             )
                         }
@@ -49,4 +49,4 @@ class UserComponent extends React.Component {
 
 }
 
-export default UserComponent
+export default EmployeeComponent

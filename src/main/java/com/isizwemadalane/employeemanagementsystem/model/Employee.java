@@ -1,10 +1,10 @@
-package com.isizwemadalane.springbootreactjs.model;
+package com.isizwemadalane.employeemanagementsystem.model;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "employees")
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,9 +18,9 @@ public class User {
 
     private String email;
 
-    public User(){}
+    public Employee(){}
 
-    public User(String firstName, String lastName, String email){
+    public Employee(String firstName, String lastName, String email){
         super();
         this.firstName = firstName;
         this.lastName = lastName;
